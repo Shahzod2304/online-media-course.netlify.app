@@ -1,0 +1,766 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цены</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://wowjs.uk/dist/wow.min.js"></script>
+    <style>
+      .hidden {
+        opacity: 0;
+      }
+
+      .btn {
+        box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+        padding: 1.25rem 2rem;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        border: 0;
+      }
+
+      .br-2 {
+        border-radius: 2px;
+      }
+
+      .btn-primary {
+        background-color: #0d47a1;
+      }
+      .btn-primary:hover {
+        background-color: #093272;
+      }
+      .btn-primary:focus {
+        background-color: #093272;
+        color: white;
+      }
+      .btn-primary:active {
+        background-color: #07285a !important;
+      }
+
+      .btn-outline-primary {
+        border: 1px solid #0d47a1;
+        color: #0d47a1;
+      }
+
+      .btn-sm {
+        padding: 0.8rem 1.5rem;
+      }
+
+      .btn-md {
+        padding: 1rem 1.6rem;
+      }
+
+      .btn-white-primary {
+        background: #fff;
+        color: #0d47a1;
+      }
+      .btn-white-primary:hover {
+        background-color: #0d47a1;
+        color: white;
+      }
+      .btn-white-primary:focus {
+        background-color: #0d47a1;
+        color: white;
+      }
+      .btn-white-primary:active {
+        background-color: #0d47a1;
+        color: white;
+      }
+
+      .delay-0 {
+        animation-delay: 0s;
+        -webkit-animation-delay: 0s;
+      }
+
+      .delay-1 {
+        animation-delay: 0.25s;
+        -webkit-animation-delay: 0.25s;
+      }
+
+      .delay-2 {
+        animation-delay: 0.5s;
+        -webkit-animation-delay: 0.5s;
+      }
+
+      .delay-3 {
+        animation-delay: 0.75s;
+        -webkit-animation-delay: 0.75s;
+      }
+
+      .delay-4 {
+        animation-delay: 1s;
+        -webkit-animation-delay: 1s;
+      }
+
+      .delay-5 {
+        animation-delay: 1.25s;
+        -webkit-animation-delay: 1.25s;
+      }
+
+      .delay-6 {
+        animation-delay: 1.5s;
+        -webkit-animation-delay: 1.5s;
+      }
+
+      .delay-7 {
+        animation-delay: 1.75s;
+        -webkit-animation-delay: 1.75s;
+      }
+
+      .delay-8 {
+        animation-delay: 2s;
+        -webkit-animation-delay: 2s;
+      }
+
+      .delay-9 {
+        animation-delay: 2.25s;
+        -webkit-animation-delay: 2.25s;
+      }
+
+      .delay-10 {
+        animation-delay: 2.5s;
+        -webkit-animation-delay: 2.5s;
+      }
+
+      @media screen and (min-width: 576px) {
+        .delay-sm-0 {
+          animation-delay: 0s;
+          -webkit-animation-delay: 0s;
+        }
+
+        .delay-sm-1 {
+          animation-delay: 0.25s;
+          -webkit-animation-delay: 0.25s;
+        }
+
+        .delay-sm-2 {
+          animation-delay: 0.5s;
+          -webkit-animation-delay: 0.5s;
+        }
+
+        .delay-sm-3 {
+          animation-delay: 0.75s;
+          -webkit-animation-delay: 0.75s;
+        }
+
+        .delay-sm-4 {
+          animation-delay: 1s;
+          -webkit-animation-delay: 1s;
+        }
+
+        .delay-sm-5 {
+          animation-delay: 1.25s;
+          -webkit-animation-delay: 1.25s;
+        }
+
+        .delay-sm-6 {
+          animation-delay: 1.5s;
+          -webkit-animation-delay: 1.5s;
+        }
+
+        .delay-sm-7 {
+          animation-delay: 1.75s;
+          -webkit-animation-delay: 1.75s;
+        }
+
+        .delay-sm-8 {
+          animation-delay: 2s;
+          -webkit-animation-delay: 2s;
+        }
+
+        .delay-sm-9 {
+          animation-delay: 2.25s;
+          -webkit-animation-delay: 2.25s;
+        }
+
+        .delay-sm-10 {
+          animation-delay: 2.5s;
+          -webkit-animation-delay: 2.5s;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .delay-md-0 {
+          animation-delay: 0s;
+          -webkit-animation-delay: 0s;
+        }
+
+        .delay-md-1 {
+          animation-delay: 0.25s;
+          -webkit-animation-delay: 0.25s;
+        }
+
+        .delay-md-2 {
+          animation-delay: 0.5s;
+          -webkit-animation-delay: 0.5s;
+        }
+
+        .delay-md-3 {
+          animation-delay: 0.75s;
+          -webkit-animation-delay: 0.75s;
+        }
+
+        .delay-md-4 {
+          animation-delay: 1s;
+          -webkit-animation-delay: 1s;
+        }
+
+        .delay-md-5 {
+          animation-delay: 1.25s;
+          -webkit-animation-delay: 1.25s;
+        }
+
+        .delay-md-6 {
+          animation-delay: 1.5s;
+          -webkit-animation-delay: 1.5s;
+        }
+
+        .delay-md-7 {
+          animation-delay: 1.75s;
+          -webkit-animation-delay: 1.75s;
+        }
+
+        .delay-md-8 {
+          animation-delay: 2s;
+          -webkit-animation-delay: 2s;
+        }
+
+        .delay-md-9 {
+          animation-delay: 2.25s;
+          -webkit-animation-delay: 2.25s;
+        }
+
+        .delay-md-10 {
+          animation-delay: 2.5s;
+          -webkit-animation-delay: 2.5s;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        .delay-lg-0 {
+          animation-delay: 0s;
+          -webkit-animation-delay: 0s;
+        }
+
+        .delay-lg-1 {
+          animation-delay: 0.25s;
+          -webkit-animation-delay: 0.25s;
+        }
+
+        .delay-lg-2 {
+          animation-delay: 0.5s;
+          -webkit-animation-delay: 0.5s;
+        }
+
+        .delay-lg-3 {
+          animation-delay: 0.75s;
+          -webkit-animation-delay: 0.75s;
+        }
+
+        .delay-lg-4 {
+          animation-delay: 1s;
+          -webkit-animation-delay: 1s;
+        }
+
+        .delay-lg-5 {
+          animation-delay: 1.25s;
+          -webkit-animation-delay: 1.25s;
+        }
+
+        .delay-lg-6 {
+          animation-delay: 1.5s;
+          -webkit-animation-delay: 1.5s;
+        }
+
+        .delay-lg-7 {
+          animation-delay: 1.75s;
+          -webkit-animation-delay: 1.75s;
+        }
+
+        .delay-lg-8 {
+          animation-delay: 2s;
+          -webkit-animation-delay: 2s;
+        }
+
+        .delay-lg-9 {
+          animation-delay: 2.25s;
+          -webkit-animation-delay: 2.25s;
+        }
+
+        .delay-lg-10 {
+          animation-delay: 2.5s;
+          -webkit-animation-delay: 2.5s;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .delay-xl-0 {
+          animation-delay: 0s;
+          -webkit-animation-delay: 0s;
+        }
+
+        .delay-xl-1 {
+          animation-delay: 0.25s;
+          -webkit-animation-delay: 0.25s;
+        }
+
+        .delay-xl-2 {
+          animation-delay: 0.5s;
+          -webkit-animation-delay: 0.5s;
+        }
+
+        .delay-xl-3 {
+          animation-delay: 0.75s;
+          -webkit-animation-delay: 0.75s;
+        }
+
+        .delay-xl-4 {
+          animation-delay: 1s;
+          -webkit-animation-delay: 1s;
+        }
+
+        .delay-xl-5 {
+          animation-delay: 1.25s;
+          -webkit-animation-delay: 1.25s;
+        }
+
+        .delay-xl-6 {
+          animation-delay: 1.5s;
+          -webkit-animation-delay: 1.5s;
+        }
+
+        .delay-xl-7 {
+          animation-delay: 1.75s;
+          -webkit-animation-delay: 1.75s;
+        }
+
+        .delay-xl-8 {
+          animation-delay: 2s;
+          -webkit-animation-delay: 2s;
+        }
+
+        .delay-xl-9 {
+          animation-delay: 2.25s;
+          -webkit-animation-delay: 2.25s;
+        }
+
+        .delay-xl-10 {
+          animation-delay: 2.5s;
+          -webkit-animation-delay: 2.5s;
+        }
+      }
+      .pricing-table {
+        overflow: hidden;
+      }
+      .pricing-table .card {
+        position: relative;
+        text-align: center;
+        background-color: #fff;
+        margin-bottom: 50px;
+        border: 0;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 5px 25px -4px rgba(0, 0, 0, 0.1);
+      }
+      .pricing-table .card:hover {
+        transform: scale(1.03);
+      }
+      .pricing-table .card.most-popular .card-heading {
+        background-color: #34495e;
+      }
+      .pricing-table .card-heading {
+        background-color: #0d47a1;
+        padding: 10px 10px;
+        border-radius: 4px 4px 0 0;
+        text-transform: uppercase;
+      }
+      .pricing-table .card-title {
+        margin-bottom: 0;
+        padding: 10px 0;
+        color: #fff;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 500;
+      }
+      .pricing-table .card-body {
+        padding: 0px;
+        text-align: center;
+      }
+      .pricing-table .card-footer {
+        background: #e6e6e6;
+        text-align: center;
+        border: 0;
+        border-radius: 0;
+        padding: 10px;
+        border-bottom: 3px solid #0d47a1;
+      }
+
+      .the-price {
+        position: relative;
+        overflow: hidden;
+        padding: 20px 10px 50px 10px;
+        margin: 0;
+      }
+      .the-price .the-price-info {
+        line-height: 1em;
+        padding: 0;
+        margin: 0 0 15px 0;
+        color: #525252;
+        font-size: 2rem;
+      }
+      .the-price .the-price-info small {
+        font-size: 1rem !important;
+      }
+      .the-price .license-count {
+        font-weight: 500;
+        color: #676767;
+        text-transform: uppercase;
+        font-size: 0.8rem !important;
+        border: 1px dashed #e6e6e6;
+        display: inline-flex;
+        padding: 5px;
+      }
+
+      .card-data {
+        padding: 20px;
+        align-self: stretch;
+        background: #fff;
+        overflow: hidden;
+      }
+      .card-data p {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        font-family: "Muli", "Helvetica Neue", Arial, sans-serif;
+        color: #676767;
+        font-weight: 500;
+        padding-bottom: 20px;
+        text-align: center;
+        border-bottom: 1px dashed #e6e6e6;
+      }
+      .card-data ul {
+        padding: 0 0 0 1rem;
+        margin: 0;
+        list-style: none;
+        text-align: left !important;
+      }
+      .card-data li.plan-feature-list {
+        padding: 5px 0;
+        font-size: 12px;
+        font-weight: 600;
+        position: relative;
+        color: #525252;
+        letter-spacing: 1px;
+      }
+      .card-data li.plan-feature-list::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        left: -1.2rem;
+        top: 10px;
+        border-width: 3px;
+        border-style: solid;
+        border-color: #0d47a1;
+        transform: rotateZ(-45deg);
+      }
+      .card-data li.plan-feature-list:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      .sign-up-strip {
+        padding: 12px 20px;
+        position: relative;
+        z-index: 9;
+        background: #212121;
+        margin: -30px -6px 0 -6px;
+        box-shadow: 0 12px 20px -10px rgba(2, 164, 81, 0.1),
+          0 4px 20px 0px rgba(0, 0, 0, 0.05),
+          0 7px 8px -5px rgba(2, 164, 81, 0.15);
+      }
+      .sign-up-strip::after,
+      .sign-up-strip::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -1px;
+        width: 6px;
+        height: 6px;
+        background: #212121;
+        z-index: -1;
+      }
+      .sign-up-strip::after {
+        right: 0;
+        transform: skewY(20deg);
+      }
+      .sign-up-strip::before {
+        left: 0;
+        transform: skewY(-20deg);
+      }
+
+      .stamp-container {
+        position: absolute;
+        top: 85px;
+        right: -18px;
+        perspective: 30em;
+      }
+
+      .stamp {
+        color: #555;
+        font-size: 0.8rem;
+        font-weight: 700;
+        border: 0.35rem solid #555;
+        display: inline-block;
+        padding: 0.25rem 1rem;
+        text-transform: uppercase;
+        border-radius: 0;
+        -webkit-mask-image: url("s.cdpn.io/8399/grunge.png");
+        -webkit-mask-size: 944px 604px;
+        mix-blend-mode: multiply;
+        transform: rotateZ(-20deg) scale(1);
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+      }
+
+      .stamped {
+        -webkit-animation-name: stamped;
+        animation-name: stamped;
+        -webkit-animation-duration: 0.8s;
+        animation-duration: 0.8s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 0);
+        animation-timing-function: cubic-bezier(0, 0, 1, 0);
+      }
+
+      @-webkit-keyframes stamped {
+        0% {
+          opacity: 0;
+          transform: rotateY(80deg) rotateZ(0deg) scale(5);
+        }
+        60% {
+          opacity: 1;
+          transform: rotateY(0) rotateZ(-20deg) scale(1);
+        }
+        80% {
+          opacity: 0.95;
+          transform: rotateZ(-20deg) scale(0.98);
+        }
+        100% {
+          opacity: 1;
+          transform: rotateZ(-20deg) scale(1);
+        }
+      }
+
+      @keyframes stamped {
+        0% {
+          opacity: 0;
+          transform: rotateY(80deg) rotateZ(0deg) scale(5);
+        }
+        60% {
+          opacity: 1;
+          transform: rotateY(0) rotateZ(-20deg) scale(1);
+        }
+        80% {
+          opacity: 0.95;
+          transform: rotateZ(-20deg) scale(0.98);
+        }
+        100% {
+          opacity: 1;
+          transform: rotateZ(-20deg) scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pricing-table bg-light">
+      <div class="container">
+        <h1 class="text-uppercase text-center pt-4">Планы</h1>
+        <hr>
+        <div class="row justify-content-center">
+          <div class="col-xl-11">
+            <div class="row mx-lg-4">
+              <div class="col-lg-4 col-md-6 order-md-2 order-lg-1 d-flex">
+                <div class="card card-primary">
+                  <div class="card-heading">
+                    <h5 class="card-title">Базовый<br>План</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="the-price">
+                      <div class="the-price-info">
+                        <span class="">150$ </span><small class="align-baseline">/Месяц</small>
+                      </div>
+                      <p class="license-count">Доступ к курсу 3 месяца</p>
+                    </div>
+                    <div class="sign-up-strip delay-0 delay-lg-1">
+                      <a href="pay.html" class="btn btn-white-primary btn-sm" role="button">Получить</a>
+                    </div>
+                    <div class="card-data">
+                      <ul>
+                        <li class="plan-feature-list">
+                          50 видеороликов
+                        </li>
+                        <li class="plan-feature-list">
+                          Разборы работ от куратора 
+                        </li>
+
+                        <li class="plan-feature-list">
+                          Общий чат в Telegram
+                        </li>
+                        <li class="plan-feature-list">
+                          Разборы работ от куратора 
+                        </li>
+                        <li class="plan-feature-list">
+                          Консультации  куратора в чате       
+                                         </li>
+                        <li class="plan-feature-list">
+                          Сертификат о прохождении курса 
+                        </li>
+                        <li class="plan-feature-list">
+                          Модули: Adobe Photoshop, Adobe Lightroom, Basic video and photo operating. 
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="buy-now-footer">
+                      <a href="pay.html" class="btn btn-md btn-primary" role="button">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="
+                  col-lg-4 col-md-10
+                  offset-md-1 offset-lg-0
+                  order-md-1 order-lg-2
+                  d-flex
+                ">
+                <div id="mostPopularPlan" class="card card-primary most-popular">
+                  <div class="card-heading">
+                    <h5 class="card-title">Стандартный<br>План</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="the-price">
+                      <div class="the-price-info">
+                        <span class="">$350 </span><small class="align-baseline">/Месяц</small>
+                      </div>
+                      <p class="license-count">Доступ к курсу 6 месяца  </p>
+                      <div class="stamp-container">
+                        <span class="stamp delay-3 delay-lg-7">Лидер<br>ПРОДАж</span>
+                      </div>
+                    </div>
+                    <div class="sign-up-strip delay-5 delay-lg-9">
+                      <a href="pay.html" class="btn btn-white-primary btn-sm" role="button">Получить</a>
+                    </div>
+                    <div class="card-data">
+                      <ul>
+                        <li class="plan-feature-list">
+                          50 видеороликов 
+                        </li>
+                        <li class="plan-feature-list">
+                          Разборы работ от куратора 
+                        </li>
+                        <li class="plan-feature-list">
+                          Общий чат в Telegram
+                        </li>
+                        <li class="plan-feature-list">
+                          Консультации куратора в чате
+                        </li>
+                        <li class="plan-feature-list">
+                          Сертификат о прохождении курса
+                        </li>
+                        <li class="plan-feature-list">
+                          Наставник в чате 
+                        </li>
+                        <li class="plan-feature-list">
+                          Продолжительность 2 месяца 
+                        </li>
+                        <li class="plan-feature-list">
+                          Модули: Adobe Photoshop, Adobe Lightroom, Basic video and photo operating, After Effects
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="buy-now-footer">
+                      <a href="pay.html" class="btn btn-md btn-primary" role="button">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 order-md-3 order-lg-3 col-md-6 d-flex">
+                <div class="card card-primary">
+                  <div class="card-heading">
+                    <h5 class="card-title">Премиум<br>План</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="the-price">
+                      <div class="the-price-info">
+                        <span class="">$500 </span><small class="align-baseline">/Месяц</small>
+                      </div>
+                      <p class="license-count">Доступ к курсу безлимит </p>
+                    </div>
+                    <div class="sign-up-strip delay-0 delay-md-1 delay-lg-3">
+                      <a href="pay.html" class="btn btn-white-primary btn-sm" role="button">Получить</a>
+                    </div>
+                    <div class="card-data">
+                      <ul>
+                        <li class="plan-feature-list">
+                          50 видеороликов 
+                        </li>
+                        <li class="plan-feature-list">
+                          Разборы работ от куратора 
+                        </li>
+                        <li class="plan-feature-list">
+                          Общий чат в Telegram
+                        </li>
+                        <li class="plan-feature-list">
+                          Консультации куратора в чате
+                        </li>
+                        <li class="plan-feature-list">
+                          Сертификат о прохождении курса
+                        </li>
+                        <li class="plan-feature-list">
+                          Наставник в чате 
+                        </li>
+                        <li class="plan-feature-list">
+                          Модули: Adobe Photoshop, Adobe Lightroom, Basic video and photo operating, After Effects, Figma, premium прессеты для Lightroom.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="buy-now-footer">
+                      <a href="pay.html" class="btn btn-md btn-primary" role="button">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      wow = new WOW({
+        boxClass: "stamp",
+        animateClass: "hidden stamped",
+        offset: 0, // default
+        mobile: true, // default
+        live: true, // default
+      });
+      wow.init();
+      wow2 = new WOW({
+        boxClass: "sign-up-strip",
+        animateClass: "animated fadeInUpBig",
+        offset: 0,
+        mobile: true,
+        live: true,
+      });
+      wow2.init();
+    </script>
+  </body>
+</html>
